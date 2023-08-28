@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/lightbox.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+ol,ul{
+    list-style: none;
+}
+a{
+    text-decoration: none
+}
+/*===============back-top=========*/
+.back-top{
+    position: fixed;
+    right: 20px;
+    bottom: 30px;
+    z-index: 999;
+}
+.back-top i{
+    height: 40px;
+    width: 40px;
+    background-color:#008000;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50px;
+    
+}
+/*==========peloder============*/
+.se-pre-con{
+   position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url(../images/loader1.gif) center no-repeat #fff;
+}
+
+/*===========style box=============== */
+.styles {
+    position:fixed;
+    top:150px;
+    left:-160px;
+    height:110px;
+    width:160px;
+    background-color:white;
+    z-index:1000;
+    -webkit-transition:all .27s ease-in-out;
+    transition:all .27s ease-in-out;
+}
+.option {
+    position:absolute;
+    left:160px;
+    z-index:1001;
+    height:50px;
+    width:50px;
+    cursor: pointer;
+    background-color: #008000;
+}
+.color {
+    position:absolute;
+    top:10px;
+    left:10px;
+    width:40px;
+    height:40px;
+    background-color:#008000;
+    z-index:1001;
+}
+
+.style1 {
+    left:60px;
+    background-color:#fb322a;
+}
+.style2 {
+    left:110px;
+    background-color:#e3be1f;
+}
+.style3 {
+    top:60px;
+    left:10px;
+    background-color:#1bae32;
+}
+.style4 {
+    top:60px;
+    left:60px;
+    background-color:#6562c0;
+}
+.style5 {
+    top:60px;
+    left:110px;
+    background-color:#8a4e4e;
+}
+.color:hover {
+    cursor:pointer;
+}
+.styles .fa {
+    position:absolute;
+    left:9px;
+    top:11px;
+    color:#FFF;
+    transition:all .5s ease-in-out;
+}
+.open {
+    left:0;
+}
+.lang {
+    position:absolute;
+    background-color:#FFF;
+    width:60px;
+    height:30px;
+    color:#404040;
+    top:120px;
+    left:10px;
+    text-align:center;
+    line-height:2;
+    font-weight:bold;
+    cursor: pointer;
+}
+.lang:hover {
+    background-color:#222;
+    color:#FFF;
+}
+.ar {
+    left:90px;
+}
+
+
+
+/*============nav bar css==============*/
+.navbar-light .navbar-nav .nav-link {
+    font-family: 'Roboto';
+	color:#fff;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    z-index: 9999;
+    transition: all linear .4s;
+}
+.navbar-expand-md .navbar-nav .nav-item{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.navbar-expand-md .navbar-nav .nav-link{
+    transition: all linear .3s;
+    position: relative;
+}
+.navbar-expand-md .navbar-nav .nav-link:after{
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color:#008000;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition: all linear .3s;
+}
+.navbar-expand-md .navbar-nav .nav-link.active{
+    color: #008000;
+}
+.navbar-expand-md .navbar-nav .nav-link.active:after{
+    opacity: 1;
+    width: 100%;
+}
+.navbar{
+    padding: 18px 1rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+.navbg {
+    background-color: rgba(0, 0, 0, 0.8);
+    animation: bg 1s;
+
+}
+@keyframes bg {
+    from {
+        top: -100px
+    }
+
+    to {
+        top: 0
+    }
+}
+
+
+.navbar-expand-md .navbar-nav .nav-link:hover{
+    color: #008000;
+}
+.navbar-expand-md .navbar-nav .nav-link:hover:after{
+    opacity: 1;
+    width: 100%;
+}
+/*==============nav bar end===============*/
+
+/*=============banner css================*/
+.count-particles{
+  background: #000022;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 80px;
+  color: #13E8E9;
+  font-size: .8em;
+  text-align: left;
+  text-indent: 4px;
+  line-height: 14px;
+  padding-bottom: 2px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.js-count-particles{
+  font-size: 1.1em;
+}
+
+#stats,
+.count-particles{
+  -webkit-user-select: none;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+#stats{
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+}
+
+.count-particles{
+  border-radius: 0 0 3px 3px;
+}
+
+
+
+#particles-js{
+      width: 100%;
+      height: 100%;
+      background-image: url(../images/earth-1149733__340.webp);
+      background-size: cover;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      position:absolute;
+   
+}
+#home{
+    height: 100vh;
+    min-height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 111;
+}
+.home-img{
+    width: 100%;
+    height: 100vh;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+.home-content-main {
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+
+
+.table-cell{
+    display: table-cell;
+    vertical-align: middle;
+}
+.home-row {
+    z-index: 2;
+    position: relative;
+}
+.home-text {
+    width: 100%;
+    padding: 0px 0px;
+}
+.home-text h2 {
+    font-family: 'Kaushan Script';
+    font-size: 32px;
+    color: #008000;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.home-text h1 {
+    font-size: 60px;
+    color:#fff;
+    letter-spacing: 0px;
+    font-weight: 900;
+    margin-bottom: 14px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.home-text h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+.hom_icon i{
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: .4s;
+    -o-transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    text-align: center;
+    margin-right: 12px;
+    height: 40px;
+    width: 40px;
+    background-color: transparent;
+    border: 2px solid #008000; 
+    line-height: 35px;
+    border-radius: 155px;
+    
+}
+.hom_icon i:hover{
+    background-color: #008000;
+    color: #fff;
+}
+
+.typed::after {
+    content: '|';
+    display: inline;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+
+/*Removes cursor that comes with typed.js*/
+.typed-cursor {
+    opacity: 0;
+    display: none;
+}
+
+/*Custom cursor animation*/
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/*============banner end=============*/
+/*===========about css==============*/
+/*=============SERVICES css=====*/
+#SERVICES{
+    padding-top: 80px;
+    
+}
+.sr_had h6{
+    font-family: 'Kaushan Script';
+    font-size: 24px;
+    color: #008000;
+    font-weight: 400;
+    text-transform: capitalize;
+    padding-bottom: 15px;
+}
+.sr_had h4{
+    font-family: 'Roboto', sans-serif;
+    font-size: 32px;
+    color: #444;
+    font-weight: 700;
+    text-transform: capitalize;
+     padding-bottom: 30px;
+    
+}
+.sr_icon i{
+    text-decoration: none;
+    color: #444;
+    font-size: 20px;
+    transition: .4s;
+    -o-transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    text-align: center;
+    margin-right: 12px;
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+    border: 2px solid #008000; 
+    line-height: 40px;
+    border-radius: 155px;
+    
+}
+.sr_icon i:hover{
+     background-color: #008000;
+    color: #fff;
+}
+.sr_con h6{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #444;
+    font-weight: 700;
+    text-transform: capitalize;
+    padding-top: 10px;
+}
+.sr_con p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+    color: #444;
+    font-weight: 300;
+    text-transform: capitalize;
+    padding-bottom: 100px;
+}
+/*=============service part end===========*/
+
+/*=============portfolio================*/
+#portfolio{
+    padding-top: 80px;
+   
+}
+.portfolio-area{
+    padding:60px 0px;
+    background:#f1f1f1;
+}
+
+.single-item{
+    display: inline-block;
+    vertical-align: middle;
+    width:25%;
+    margin:-2px;
+    position: relative;
+}
+.img-thumbnail img{
+    width:100%;
+}
+.img-overlay{
+    position: absolute;
+    width:100%;
+    height:100%;
+    left:0;
+    top:0px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    background:#00000078;
+    transition: .4s;
+    cursor: pointer;
+    transform: scaleY(0);
+    transform-origin: center center;
+    opacity:0;
+    visibility: hidden;
+}
+.single-item:hover .img-overlay{
+    transform: scaleY(1);
+    opacity: 1;
+    visibility: visible;
+}
+.img-overlay h2{
+    color:#fff;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom:10px;
+}
+.img-overlay i{
+    color:#fff;
+    font-size: 25px;
+    padding:0px 25px;
+}
+
+/*Controls CSS*/
+button:focus{
+    outline: none;
+}
+.controls{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.controls button{
+    background: #000;
+    border:none;
+    color:#fff;
+    font-size:16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding:10px 23px;
+    margin-bottom: 5px;
+    transition: .4s;
+}
+.controls button:hover, button.mixitup-control-active{
+    background: #008000;
+    cursor:pointer;
+}
+/*==============Testimonial css============*/
+
+/*=============blog=============*/
+#blog{
+    padding-bottom: 80px;
+}
+.card-body i{
+    text-decoration: none;
+    color: #444;
+    font-size: 14px;
+    transition: .4s;
+    -o-transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    text-align: center;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    margin-bottom: 5px;
+    transition: all linear .3s;
+    
+}
+.card-body i:hover{
+    
+    color: #008000;
+   
+}
+.card-title{
+    color:#008000;
+    text-transform:capitalize;
+    font-size: 18px;
+    font-weight: 700;
+}
+.modal-content {
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	width: 100%;
+	pointer-events: auto;
+	background-color: #fff;
+	background-clip: padding-box;
+	border: 1px solid rgba(0,0,0,.2);
+	border-radius: .3rem;
+	outline: 0;
+	margin-top: 100px;
+}
+
+.modal-body p{
+    padding-bottom: 10px;
+}
+.modal-body h6{
+    text-align: center;
+    color: #444;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+.modal-body a{
+    color:#008000;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 20px;
+    text-decoration: none;
+}
+/*=================from css=============*/
+.ls_part h6{
+    font-family: 'Roboto', sans-serif;
+    font-size:16px;
+    color: #777;
+    font-weight:700;
+    line-height: 26px;
+}
+.ragtion h3{
+    font-family: 'Roboto', sans-serif;
+    font-size:18px;
+    color: #444;
+    font-weight:700;
+    padding-bottom: 6px;
+}
+.ls_part h3{
+    font-family: 'Roboto', sans-serif;
+    font-size:18px;
+    color: #444;
+    font-weight:700;
+}
+.ls_icon i{
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: 40px;
+    color: #008000;
+    position: relative;
+}
+.ls_con h4{
+    margin-top: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size:18px;
+    color: #444;
+    font-weight: 700;
+}
+.ls_con h6{
+    font-family: 'Roboto', sans-serif;
+    font-size:16px;
+    color: #777;
+    font-weight: 700;
+}
+.ls_icon:after{
+    content: '';
+    height: 90%;
+    width: 2px;
+    position: absolute;
+    background-color: #777;
+    top: 16px;
+    right:20px;
+    bottom: -8px;
+    
+}
+span{
+    color: #008000;
+}
+.copy h6{
+    font-family: 'Roboto', sans-serif;
+    font-size:18px;
+    color: #777;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+</style>
+<body  data-spy="scroll" data-target=".navbar" data-offset="190">
+<!--==========peloder==========-->
+<div class="se-pre-con">     
+</div>
+
+<!--========style=============-->
+
+ <!--==============nav bar end============-->
+ 
+ <!--==========banner part start===========-->
+ <div id="home">
+       <div id="particles-js">
+        <img src="https://manarat.ac.bd/wp-content/uploads/2023/07/Banner-new-4-scaled.jpg" class="img-fluid w-100">
+       </div>
+           <div class="home-content-main">
+                    <div class="table-cell">
+                        <div class="container">
+                            <div class="row home-row">          
+                    </div><!-- end row  -->
+                </div><!-- end container -->
+            </div><!-- end table-cell -->
+        </div><!-- end home-content-main  -->
+    </div>
+<!--==========banner part end==============-->
+ 
+
+ <!--==========service end=============-->
+ <!--=============portfolio part========-->
+ <section id="portfolio">
+     <div class="container">
+         <div class="row">
+             <div class="col-lg-12">
+                 <div class="sr_had prt text-center">
+                   <h6>2nd Convocation Gallery</h6>
+                   <h4>Portfolio</h4>
+               </div>
+             </div>
+         </div>
+         <div class="controls">
+    		<button type="button" data-filter="all">All</button>
+    		<button type="button" data-filter=".Collection">Gown Collection</button>
+    		<button type="button" data-filter=".convocation">convocation</button>
+    		
+    	</div>
+    	<div class="portfolio-item">
+            <div class="single-item mix convocation">
+    			<div class="img-thumbnail">
+    				<img src="https://manarat.ac.bd/wp-content/uploads/2023/07/con-18-scaled.jpg" class="img-fluid w-100" alt="">
+    			</div>
+    			<div class="img-overlay">
+    			<a href="https://manarat.ac.bd/wp-content/uploads/2023/07/con-18-scaled.jpg" data-lightbox="roadtrip" class="img-fluid w-100">
+    			     <i class="fas fa-image"></i>
+    			     </a>
+    			
+    			</div>
+    		</div>
+            <div class="single-item mix convocation">
+    			<div class="img-thumbnail">
+    				<img src="https://manarat.ac.bd/wp-content/uploads/2023/07/con-19-scaled.jpg" class="img-fluid w-100" alt="">
+    			</div>
+    			<div class="img-overlay">
+    			<a href="https://manarat.ac.bd/wp-content/uploads/2023/07/con-19-scaled.jpg" data-lightbox="roadtrip" class="img-fluid w-100">
+    			     <i class="fas fa-image"></i>
+    			     </a>
+    			
+    			</div>
+    		</div>
+            <div class="single-item mix convocation">
+    			<div class="img-thumbnail">
+    				<img src="https://manarat.ac.bd/wp-content/uploads/2023/07/con-20-scaled.jpg" class="img-fluid w-100" alt="">
+    			</div>
+    			<div class="img-overlay">
+    			<a href="https://manarat.ac.bd/wp-content/uploads/2023/07/con-20-scaled.jpg" data-lightbox="roadtrip" class="img-fluid w-100">
+    			     <i class="fas fa-image"></i>
+    			     </a>
+    			
+    			</div>
+    		</div>
+    		<div class="single-item mix Collection">
+    			<div class="img-thumbnail">
+    				<img src="https://manarat.ac.bd/wp-content/uploads/2023/07/Gallery-1-scaled.jpg" alt="" class="img-fluid w-100">
+    			</div>
+    			<div class="img-overlay">
+    			     <a href="https://manarat.ac.bd/wp-content/uploads/2023/07/Gallery-1-scaled.jpg" data-lightbox="roadtrip">
+    			     <i class="fas fa-image"></i>
+    			     </a>
+    				
+    			</div>
+    		</div>
+    		<div class="single-item mix Collection">
+    			<div class="img-thumbnail">
+    				<img src="https://manarat.ac.bd/wp-content/uploads/2023/07/Gallery-2-scaled.jpg" alt="">
+    			</div>
+    			<div class="img-overlay">
+    			<a href="https://manarat.ac.bd/wp-content/uploads/2023/07/Gallery-2-scaled.jpg" data-lightbox="roadtrip">
+    			     <i class="fas fa-image"></i>
+    			     </a>
+    				
+    			</div>
+    		</div>
+    		<div class="single-item mix Collection">
+    			<div class="img-thumbnail">
+    				<img src="https://manarat.ac.bd/wp-content/uploads/2023/07/Gallery-3-scaled.jpg" alt="">
+    			</div>
+    			<div class="img-overlay">
+    			<a href="https://manarat.ac.bd/wp-content/uploads/2023/07/Gallery-3-scaled.jpg" data-lightbox="roadtrip">
+    			     <i class="fas fa-image"></i>
+    			     </a>
+    				
+    			</div>
+    		</div>
+    		<div class="single-item mix Collection">
+    			<div class="img-thumbnail">
+    				<img src="	https://manarat.ac.bd/wp-content/uploads/2023/07/Gallery-9-scaled.jpg" alt="">
+    			</div>
+    			<div class="img-overlay">
+    			<a href="https://manarat.ac.bd/wp-content/uploads/2023/07/Gallery-9-scaled.jpg" data-lightbox="roadtrip">
+    			     <i class="fas fa-image"></i>
+    			     </a>
+    				
+    			</div>
+    		</div>
+    		<div class="single-item mix convocation">
+    			<div class="img-thumbnail">
+    				<img src="https://manarat.ac.bd/wp-content/uploads/2023/07/con-1-scaled.jpg" class="img-fluid w-100" alt="">
+    			</div>
+    			<div class="img-overlay">
+    			<a href="https://manarat.ac.bd/wp-content/uploads/2023/07/con-1-scaled.jpg" data-lightbox="roadtrip" class="img-fluid w-100">
+    			     <i class="fas fa-image"></i>
+    			     </a>
+    			
+    			</div>
+    		</div>
+            <div class="single-item mix convocation">
+    			<div class="img-thumbnail">
+    				<img src="https://manarat.ac.bd/wp-content/uploads/2023/07/con-2-scaled.jpg" class="img-fluid w-100" alt="">
+    			</div>
+    			<div class="img-overlay">
+    			<a href="https://manarat.ac.bd/wp-content/uploads/2023/07/con-2-scaled.jpg" data-lightbox="roadtrip" class="img-fluid w-100">
+    			     <i class="fas fa-image"></i>
+    			     </a>
+    			
+    			</div>
+    		</div>
+            <div class="single-item mix convocation">
+    			<div class="img-thumbnail">
+    				<img src="https://manarat.ac.bd/wp-content/uploads/2023/07/con-3-scaled.jpg" class="img-fluid w-100" alt="">
+    			</div>
+    			<div class="img-overlay">
+    			<a href="https://manarat.ac.bd/wp-content/uploads/2023/07/con-3-scaled.jpg" data-lightbox="roadtrip" class="img-fluid w-100">
+    			     <i class="fas fa-image"></i>
+    			     </a>
+    			</div>
+    		</div>
+            <div class="single-item mix convocation">
+    			<div class="img-thumbnail">
+    				<img src="https://manarat.ac.bd/wp-content/uploads/2023/07/con-4-scaled.jpg" class="img-fluid w-100" alt="">
+    			</div>
+    			<div class="img-overlay">
+    			<a href="https://manarat.ac.bd/wp-content/uploads/2023/07/con-4-scaled.jpg" data-lightbox="roadtrip" class="img-fluid w-100">
+    			     <i class="fas fa-image"></i>
+    			     </a>
+    			
+    			</div>
+    		</div>
+            <div class="single-item mix Collection">
+    			<div class="img-thumbnail">
+    				<img src="https://manarat.ac.bd/wp-content/uploads/2023/07/Gallery-11-scaled.jpg" alt="">
+    			</div>
+    			<div class="img-overlay">
+    			<a href="https://manarat.ac.bd/wp-content/uploads/2023/07/Gallery-11-scaled.jpg" data-lightbox="roadtrip">
+    			     <i class="fas fa-image"></i>
+    			     </a>
+    			
+    			</div>
+    		</div>
+    		<div class="single-item mix Collection">
+    			<div class="img-thumbnail">
+    				<img src="https://manarat.ac.bd/wp-content/uploads/2023/07/Gallery-4-scaled.jpg" alt="">
+    			</div>
+    			<div class="img-overlay">
+    			<a href="https://manarat.ac.bd/wp-content/uploads/2023/07/Gallery-4-scaled.jpg" data-lightbox="roadtrip">
+    			     <i class="fas fa-image"></i>
+    			     </a>
+    				
+    			</div>
+    		</div>
+    		<div class="single-item mix Collection">
+    			<div class="img-thumbnail">
+    				<img src="https://manarat.ac.bd/wp-content/uploads/2023/07/Gallery-13-scaled.jpg" alt="" class="img-fluid w-100">
+    			</div>
+    			<div class="img-overlay">
+    			<a href="https://manarat.ac.bd/wp-content/uploads/2023/07/Gallery-13-scaled.jpg" data-lightbox="roadtrip" class="img-fluid w-100">
+    			     <i class="fas fa-image"></i>
+    			     </a>
+    				
+    			</div>
+    		</div>
+    		<div class="single-item mix Collection">
+    			<div class="img-thumbnail">
+    				<img src="https://manarat.ac.bd/wp-content/uploads/2023/07/Gallery-10-scaled.jpg" alt="" class="img-fluid w-100">
+    			</div>
+    			<div class="img-overlay">
+    			<a href="https://manarat.ac.bd/wp-content/uploads/2023/07/Gallery-10-scaled.jpg" alt="" class="img-fluid w-100" data-lightbox="roadtrip">
+    			     <i class="fas fa-image"></i>
+    			     </a>
+    			</div>
+    		</div>
+            <div class="single-item mix convocation">
+    			<div class="img-thumbnail">
+    				<img src="https://manarat.ac.bd/wp-content/uploads/2023/07/con-5-scaled.jpg" class="img-fluid w-100" alt="">
+    			</div>
+    			<div class="img-overlay">
+    			<a href="https://manarat.ac.bd/wp-content/uploads/2023/07/con-5-scaled.jpg" data-lightbox="roadtrip" class="img-fluid w-100">
+    			     <i class="fas fa-image"></i>
+    			     </a>
+    			
+    			</div>
+    		</div>
+            <div class="single-item mix convocation">
+    			<div class="img-thumbnail">
+    				<img src="https://manarat.ac.bd/wp-content/uploads/2023/07/con-6-scaled.jpg" class="img-fluid w-100" alt="">
+    			</div>
+    			<div class="img-overlay">
+    			<a href="https://manarat.ac.bd/wp-content/uploads/2023/07/con-6-scaled.jpg" data-lightbox="roadtrip" class="img-fluid w-100">
+    			     <i class="fas fa-image"></i>
+    			     </a>
+    			
+    			</div>
+    		</div>
+            <div class="single-item mix convocation">
+    			<div class="img-thumbnail">
+    				<img src="https://manarat.ac.bd/wp-content/uploads/2023/07/con-7-scaled.jpg" class="img-fluid w-100" alt="">
+    			</div>
+    			<div class="img-overlay">
+    			<a href="https://manarat.ac.bd/wp-content/uploads/2023/07/con-7-scaled.jpg" data-lightbox="roadtrip" class="img-fluid w-100">
+    			     <i class="fas fa-image"></i>
+    			     </a>
+    			
+    			</div>
+    		</div>
+            <div class="single-item mix convocation">
+    			<div class="img-thumbnail">
+    				<img src="https://manarat.ac.bd/wp-content/uploads/2023/07/con-8-scaled.jpg" class="img-fluid w-100" alt="">
+    			</div>
+    			<div class="img-overlay">
+    			<a href="https://manarat.ac.bd/wp-content/uploads/2023/07/con-8-scaled.jpg" data-lightbox="roadtrip" class="img-fluid w-100">
+    			     <i class="fas fa-image"></i>
+    			     </a>
+    			
+    			</div>
+    		</div>
+            <div class="single-item mix convocation">
+    			<div class="img-thumbnail">
+    				<img src="https://manarat.ac.bd/wp-content/uploads/2023/07/con-9-scaled.jpg" class="img-fluid w-100" alt="">
+    			</div>
+    			<div class="img-overlay">
+    			<a href="https://manarat.ac.bd/wp-content/uploads/2023/07/con-9-scaled.jpg" data-lightbox="roadtrip" class="img-fluid w-100">
+    			     <i class="fas fa-image"></i>
+    			     </a>
+    			
+    			</div>
+    		</div>
+            <div class="single-item mix convocation">
+    			<div class="img-thumbnail">
+    				<img src="https://manarat.ac.bd/wp-content/uploads/2023/07/con-10-scaled.jpg" class="img-fluid w-100" alt="">
+    			</div>
+    			<div class="img-overlay">
+    			<a href="https://manarat.ac.bd/wp-content/uploads/2023/07/con-10-scaled.jpg" data-lightbox="roadtrip" class="img-fluid w-100">
+    			     <i class="fas fa-image"></i>
+    			     </a>
+    			
+    			</div>
+    		</div>
+            <div class="single-item mix convocation">
+    			<div class="img-thumbnail">
+    				<img src="https://manarat.ac.bd/wp-content/uploads/2023/07/con-11-scaled.jpg" class="img-fluid w-100" alt="">
+    			</div>
+    			<div class="img-overlay">
+    			<a href="https://manarat.ac.bd/wp-content/uploads/2023/07/con-11-scaled.jpg" data-lightbox="roadtrip" class="img-fluid w-100">
+    			     <i class="fas fa-image"></i>
+    			     </a>
+    			
+    			</div>
+    		</div>
+            <div class="single-item mix convocation">
+    			<div class="img-thumbnail">
+    				<img src="https://manarat.ac.bd/wp-content/uploads/2023/07/con-12-scaled.jpg" class="img-fluid w-100" alt="">
+    			</div>
+    			<div class="img-overlay">
+    			<a href="https://manarat.ac.bd/wp-content/uploads/2023/07/con-12-scaled.jpg" data-lightbox="roadtrip" class="img-fluid w-100">
+    			     <i class="fas fa-image"></i>
+    			     </a>
+    			
+    			</div>
+    		</div>
+            <div class="single-item mix convocation">
+    			<div class="img-thumbnail">
+    				<img src="https://manarat.ac.bd/wp-content/uploads/2023/07/con-13-scaled.jpg" class="img-fluid w-100" alt="">
+    			</div>
+    			<div class="img-overlay">
+    			<a href="https://manarat.ac.bd/wp-content/uploads/2023/07/con-13-scaled.jpg" data-lightbox="roadtrip" class="img-fluid w-100">
+    			     <i class="fas fa-image"></i>
+    			     </a>
+    			
+    			</div>
+    		</div>
+            <div class="single-item mix convocation">
+    			<div class="img-thumbnail">
+    				<img src="https://manarat.ac.bd/wp-content/uploads/2023/07/con-14-scaled.jpg" class="img-fluid w-100" alt="">
+    			</div>
+    			<div class="img-overlay">
+    			<a href="https://manarat.ac.bd/wp-content/uploads/2023/07/con-14-scaled.jpg" data-lightbox="roadtrip" class="img-fluid w-100">
+    			     <i class="fas fa-image"></i>
+    			     </a>
+    			
+    			</div>
+    		</div>
+            <div class="single-item mix convocation">
+    			<div class="img-thumbnail">
+    				<img src="https://manarat.ac.bd/wp-content/uploads/2023/07/con-15-scaled.jpg" class="img-fluid w-100" alt="">
+    			</div>
+    			<div class="img-overlay">
+    			<a href="https://manarat.ac.bd/wp-content/uploads/2023/07/con-15-scaled.jpg" data-lightbox="roadtrip" class="img-fluid w-100">
+    			     <i class="fas fa-image"></i>
+    			     </a>
+    			
+    			</div>
+    		</div>
+            <div class="single-item mix convocation">
+    			<div class="img-thumbnail">
+    				<img src="https://manarat.ac.bd/wp-content/uploads/2023/07/con-16-scaled.jpg" class="img-fluid w-100" alt="">
+    			</div>
+    			<div class="img-overlay">
+    			<a href="https://manarat.ac.bd/wp-content/uploads/2023/07/con-16-scaled.jpg" data-lightbox="roadtrip" class="img-fluid w-100">
+    			     <i class="fas fa-image"></i>
+    			     </a>
+    			
+    			</div>
+    		</div>
+            <div class="single-item mix convocation">
+    			<div class="img-thumbnail">
+    				<img src="https://manarat.ac.bd/wp-content/uploads/2023/07/con-17-scaled.jpg" class="img-fluid w-100" alt="">
+    			</div>
+    			<div class="img-overlay">
+    			<a href="https://manarat.ac.bd/wp-content/uploads/2023/07/con-17-scaled.jpg" data-lightbox="roadtrip" class="img-fluid w-100">
+    			     <i class="fas fa-image"></i>
+    			     </a>
+    			
+    			</div>
+    		</div>
+            <!-- end -->
+    	</div>
+     </div>
+ </section>
+ <!--===========protfileo end===========-->
+ <!--==========Testimonial==============-->
+ 
+ <!--=============Testimonial end============-->
+ <!--=================exprince=============-->
+ 
+ <!-- Modal -->
+
+    <hr>
+    <div class="copy text-center">
+        <h6>COPYRIGHT © 2023 BY <span>IT</span> ALL RIGHT RESERVED</h6>
+    </div>
+</section>
+<a href="#" class="back-top">
+    <i class="fa fa-chevron-up"></i>
+</a>
+<!--==============regtion part end==========-->
+<script>
+//============efact================//
+/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+particlesJS.load('particles-js', 'assets/particles.json', function() {
+  console.log('callback - particles.js config loaded');
+});
+    
+    
+    
+    
+   particlesJS('particles-js',
+  
+{
+    "particles": {
+      "number": {
+        "value": 80,
+        "density": {
+          "enable": true,
+          "value_area": 800
+        }
+      },
+      "color": {
+        "value": "#ffffff"
+      },
+      "shape": {
+        "type": "circle",
+        "stroke": {
+          "width": 0,
+          "color": "#000000"
+        },
+        "polygon": {
+          "nb_sides": 5
+        },
+        "image": {
+          "src": "img/github.svg",
+          "width": 0,
+          "height": 0
+        }
+      },
+      "opacity": {
+        "value": 0.5,
+        "random": false,
+        "anim": {
+          "enable": false,
+          "speed": 1,
+          "opacity_min": 0.1,
+          "sync": false
+        }
+      },
+      "size": {
+        "value": 5,
+        "random": true,
+        "anim": {
+          "enable": false,
+          "speed": 40,
+          "size_min": 0.1,
+          "sync": false
+        }
+      },
+      "line_linked": {
+        "enable": true,
+        "distance": 150,
+        "color": "#ffffff",
+        "opacity": 0.4,
+        "width": 1
+      },
+      "move": {
+        "enable": true,
+        "speed": 6,
+        "direction": "none",
+        "random": false,
+        "straight": false,
+        "out_mode": "out",
+        "attract": {
+          "enable": false,
+          "rotateX": 600,
+          "rotateY": 1200
+        }
+      }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": {
+          "enable": true,
+          "mode": "repulse"
+        },
+        "onclick": {
+          "enable": true,
+          "mode": "push"
+        },
+        "resize": true
+      },
+      "modes": {
+        "grab": {
+          "distance": 400,
+          "line_linked": {
+            "opacity": 1
+          }
+        },
+        "bubble": {
+          "distance": 400,
+          "size": 40,
+          "duration": 2,
+          "opacity": 8,
+          "speed": 3
+        },
+        "repulse": {
+          "distance": 200
+        },
+        "push": {
+          "particles_nb": 4
+        },
+        "remove": {
+          "particles_nb": 2
+        }
+      }
+    },
+    "retina_detect": true,
+    "config_demo": {
+      "hide_card": false,
+      "background_color": "#b61924",
+      "background_image": "",
+      "background_position": "50% 50%",
+      "background_repeat": "no-repeat",
+      "background_size": "cover"
+    }
+  }
+
+);
+</script>
+   
+   
+<!--==================js linkup================-->
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/typed.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/jquery.mb.YTPlayer.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/venobox.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/lightbox.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/custom.js"></script>   
+</body>
+</html>
